@@ -1,0 +1,18 @@
+name: "peleonard-website"
+output_dir: "."
+navbar:
+  title: "Pengfeileonard Website"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Projects"
+      href: projects.html
+    - text: "R-pkg"
+      href: R_pkg.html
+    - text: "About Me"
+      href: about.html
+    - text: "About This Website"
+      href: aboutWs.html
+output:
+  html_document:
+    theme: flatly
