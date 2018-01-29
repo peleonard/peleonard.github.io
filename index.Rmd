@@ -1,0 +1,42 @@
+---
+title: "Pengfei (Leonard) Li's Website"
+---
+
+\
+\
+\
+
+__Let's see how RcppMovStat works to smooth Unevenly Spaced Time Series!__
+__An intercative [shinyApp](https://www.shinyapps.io/admin/#/application/257879/urls) will help you understand the function.__
+
+\
+\
+
+```{r, echo = FALSE, message = FALSE, warning = F, fig.align='center', fig.width=10, fig.height=4}
+
+library(data.table)
+library(tidyverse)
+library(RcppMovStat)
+Stl.1.Sw2 <- fread("Stl_1_Sw2.csv")
+
+# Width of window
+ww <- 2e4
+# Step Size
+ss <- 200
+
+# Rolling Statistics for PM
+pm.rs <- data.table(movMeanUE(Stl.1.Sw2$PM, Stl.1.Sw2$pos - Stl.1.Sw2$pos[1] + 1, 
+                            ww, ss, na_rm = T, sizeD = T)) 
+setnames(pm.rs, c("pos", "PM", "PM.rm"))
+pm.rs[ ,":="(PM.rmed = movQtUE(Stl.1.Sw2$PM, Stl.1.Sw2$pos - Stl.1.Sw2$pos[1] + 1, 
+                            ww, prob = .5, ss, na_rm = T, sizeD = T)[,3],
+             pos = pos + Stl.1.Sw2$pos[1] - 1)]
+
+Co.AC2 <- melt(pm.rs, id.vars = c("pos", "PM"), measure.vars = c("PM.rm", "PM.rmed"),
+               variable.name = "RollingMeasure")
+
+
+ggplot(Co.AC2, aes(x = pos)) + geom_point(aes(y = PM), size = .5) + 
+  geom_line(aes(y = value, color = RollingMeasure), size = .3) + 
+  theme_gray() + theme(legend.position = "bottom")
+```

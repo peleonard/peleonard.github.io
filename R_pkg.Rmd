@@ -1,0 +1,5 @@
+---
+title: "R package"
+---
+
+A new package \textit{RcppMovStat} to calculate moving statistics of both Evenly and Unevely Spaced Time Seris. 
