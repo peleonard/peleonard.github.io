@@ -6,8 +6,9 @@ title: "Pengfei (Leonard) Li's Website"
 \
 \
 
-__Let's see how RcppMovStat works to smooth Unevenly Spaced Time Series!__
-__An intercative [shinyApp](https://www.shinyapps.io/admin/#/application/257879/urls) will help you understand the function.__
+__Let's see how RcppMovStat works to smooth Unevenly Spaced Time Series!An intercative [shinyApp](https://www.shinyapps.io/admin/#/application/257879/urls) will help you understand the function.__ \
+
+__A detailed benchmark and vignette are coming! __
 
 \
 \
