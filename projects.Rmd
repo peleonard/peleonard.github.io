@@ -2,6 +2,16 @@
 title: "Projects"
 ---
 
+\  
+   
+
+## WGBS Profiling and DMR Detecting
+
+- Applied exploratory data analysis to acquire a big-picture 
+- Utilized HMM to analyze CpG islands and non-CpG islands and accessed sensitivity and specificity by CART. 
+- Implemented efficient smoothing methods and the variogram model to disentangle spatial structures from noisy data. 
+- Currently using the logistic regression to get a basic sense of DMR. 
+
 
 ## [A R Package RcppMovStat](https://peleonard.github.io/R_pkg.html)
 
