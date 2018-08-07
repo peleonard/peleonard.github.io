@@ -210,22 +210,67 @@ $(document).ready(function () {
 
 
 <p> </p>
-<div id="wgbs-profiling-and-dmr-detecting" class="section level2">
-<h2>WGBS Profiling and DMR Detecting</h2>
+<div id="default-rate-prediction-for-lending-club-data-r-data.table-caret.-python-scikit-learn-imblearn" class="section level2">
+<h2>Default Rate Prediction for Lending Club Data (R: data.table, caret. Python: scikit-learn, imblearn)</h2>
+<p>Jun 2018 – Present</p>
 <ul>
-<li>Applied exploratory data analysis to acquire a big-picture</li>
-<li>Utilized HMM to analyze CpG islands and non-CpG islands and accessed sensitivity and specificity by CART.</li>
-<li>Implemented efficient smoothing methods and the variogram model to disentangle spatial structures from noisy data.</li>
-<li>Currently using the logistic regression to get a basic sense of DMR.</li>
+<li><p>Validated the loan data on Lending Club, dealt with high missing-rate features and transformed skewed features.</p></li>
+<li><p>Conducted graphical analysis on the imbalanced response, good (92) or bad (1) loan, and utilized 98 mixed-type features and ~97K loan records to construct the machine learning model.</p></li>
+<li><p>Attempted the pipeline with different samplers or weight-penalized machine learning method, and determined an XGBoost with AUPRC 0.9241 ( precision-driven: precision 0.9857) and an SMOTE plus logistic regression with AUPRC 0.9151( recall-driven: recall 0.8622), and visualized the default reason by the feature importance plot.</p></li>
+</ul>
+</div>
+<div id="story-of-3-point-nba-player-tableau" class="section level2">
+<h2><a href="https://public.tableau.com/profile/pengfei.li6575#!/vizhome/nbaStat1950-2017/Story1">Story of 3-Point NBA Player (Tableau)</a></h2>
+<p>Apr 2018 – May 2018</p>
+<ul>
+<li><p>Visualized the number of players from U.S. states on the geometrical map, and concluded a “stick” shape of high 3P% (3-Point Field Goal Rate) players.</p></li>
+<li><p>Built a dashboard to track descriptive 3-Point statistics: 3P%, 3PAr (3P Field Goal Attempt Rate), and 3P (3P Field Goals) of top 3-Point players from 2010 to 2017.</p></li>
+<li><p>Created an animation of 3-D Shooter by plotting 3P% and Dbpm (defense contribution) to justify a sharply increasing demand for 3-D players.</p></li>
+</ul>
+</div>
+<div id="churn-prediction-and-recommendation-of-a-musicbox-python-pyspark-scikit-learn-graphlab-als" class="section level2">
+<h2><a href="https://github.com/peleonard/MusicBoxCapstone">Churn Prediction and Recommendation of A MusicBox (Python: pyspark, scikit-learn, graphLab, ALS)</a></h2>
+<p>Jun 2018 – Jul 2018</p>
+<ul>
+<li><p>Cleansed the log dataset (14G), employed pyspark to generate user behaviours features and the churn label.</p></li>
+<li><p>Performed the exploratory data analysis to visualize the relationship between features and the label (churn or not).</p></li>
+<li><p>Constructed a stacking model with test AUC 0.9337 (formerly around 0.85), and summarized the churn reason.</p></li>
+<li><p>Defined the implicit rating, and bucketed it into 5 levels to mimic practical users’ star rating.</p></li>
+<li><p>Built popularity-based recommender, item-item collaborative filtering, and matrix factorization recommender with RMSE 1.0027 (graphLab) and 1.188 (pyspark ALS), previously 1.3~1.5.</p></li>
+</ul>
+</div>
+<div id="chatbot-by-seq-2-seq-model-python-re-and-tensorflow" class="section level2">
+<h2>Chatbot by Seq-2-Seq Model (Python: re and TensorFlow)</h2>
+<p>Apr 2018 – May 2018</p>
+<ul>
+<li><p>Utilized basic NLP to parse and clean the original movie conversations dataset, 220K Questions and Answers, 50K words, and attained the final input and output.</p></li>
+<li><p>Referring to neural machine translation, constructed two stacked LSTMs: encoder LSTMs and decoder LSTMs with attention mechanisms to mimic the human brain tackling the conversation.</p></li>
+<li><p>Trained the model with learning rate decay and the dropout method for 100 epochs and achieved simple chat with the machine.</p></li>
+</ul>
+</div>
+<div id="yelp-dataset-by-sql-sqlite" class="section level2">
+<h2>Yelp Dataset by SQL (SQLite)</h2>
+<p>Mar 2018 – Apr 2018</p>
+<ul>
+<li>Project descriptionDetermined the data model by ER (entity relationship) diagram, retrieved data from the relational database and interpreted the implications in source data, e.g. relationships between rating stars and operation of hours.</li>
+</ul>
+</div>
+<div id="analysis-of-methylation-patterns-in-whole-genome-bisulfite-sequencing-data-r-data.table-hiddenmarkov" class="section level2">
+<h2>Analysis of Methylation Patterns in Whole Genome Bisulfite Sequencing Data (R: data.table HiddenMarkov)</h2>
+<p>Nov 2017 – Feb 2018</p>
+<ul>
+<li><p>Explored the data, devised an HMM (2M length) to classify CpG islands and non-CpG islands and acquired 94.4% sensitivity and 70.0% PPV on CpG level, and 80.4% and 45.9% on island level, and accessed the error by CART.</p></li>
+<li><p>Developed a package RcppMovStat, to efficiently calculate moving statistics of the unevenly spaced 2M length sequence within 3 minutes, the window size 500, 5~6x faster than current package, and deployed a shinyApp.</p></li>
+<li><p>Paralleling computation with , sped up the logistic regression and simulation over the chromosome by 5x.</p></li>
 </ul>
 </div>
 <div id="a-r-package-rcppmovstat" class="section level2">
 <h2><a href="https://peleonard.github.io/R_pkg.html">A R Package RcppMovStat</a></h2>
+<p>Oct 2017 – Nov 2017</p>
 <ul>
-<li>Built a R package using <em>Rcpp</em>, using its syntactic sugar, gluing C++ to R.</li>
-<li>Efficiently calculated moving statistics, e.g. moving average, 5 ~ 6 times than similar package</li>
-<li>Designed a routine to obtain moving statistics for <em>unevenly</em> spaced data.</li>
-<li>Published it to <a href="https://github.com/peleonard/RcppMovStat.git">Github</a> and <strong>R-CRAN</strong> and deployed a shinyApp.</li>
+<li><p>Built an R package using Rcpp, using its syntactic sugar, gluing C++ to R}</p></li>
+<li><p>Calculated moving statistics, e.g. moving average, 5 ~ 6 times than similar packages efficiently and designed a routine to obtain moving statistics for unevenly spaced data.</p></li>
+<li><p>The two features above make it possible to calculate the moving average on a sequence of a 2-million length within 2 ~ 3 minutes, and deployed a shinyApp.</p></li>
 </ul>
 </div>
 <div id="overview-of-supervised-learning" class="section level2">
@@ -234,21 +279,6 @@ $(document).ready(function () {
 <li>Built a framework of generalized basis expansion quantitative prediction: subset selection, bias-variance trade-off, accessing statistical accuracy.</li>
 <li>Analyzed a dataset following above procedures.</li>
 <li>Obtained an optimal model based on the tabular errors and visualized uncertainty in Matlab.</li>
-</ul>
-</div>
-<div id="classification-methods-and-roc-curves" class="section level2">
-<h2>Classification Methods and ROC curves</h2>
-<ul>
-<li>Preprocessed the heart disease data.</li>
-<li>Employed PCA to check underlying clustering feature.</li>
-<li>Performed discriminant analysis, random forests and supporting vector machines and concluded nonlinear boundaries by SVM with polynomial kernel.</li>
-</ul>
-</div>
-<div id="reproduction-of-rational-quadrature" class="section level2">
-<h2>Reproduction of Rational Quadrature</h2>
-<ul>
-<li>Determined a discretization procedure for the integral of some special type of rational functions.</li>
-<li>Programmed in Matlab to evaluate the exactness of this approximation.</li>
 </ul>
 </div>
 
