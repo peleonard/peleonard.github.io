@@ -2,10 +2,12 @@
 title: "About Me"
 ---
 
+\ 
+
 - __Name:__ Pengfei (Leonard) Li
 - __Ocupation:__ Statistics Ph.D. Candidate in Tulane University
 - __Address:__ 424 Gibson Hall  
-    6823 St. Charles AvenueAddress 1  
+    6823 St. Charles Avenue
     New Orleans, LA, 70118  
     United States
 - __Phone:__ (504) 858 8985

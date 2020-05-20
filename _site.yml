@@ -1,10 +1,12 @@
 name: "peleonard-website"
 output_dir: "."
 navbar:
-  title: "Pengfeileonard Website"
+  title: "Leonard Li Website"
   left:
     - text: "Home"
       href: index.html
+    - text: "Experiences"
+      href: experiences.html   
     - text: "Projects"
       href: projects.html
     - text: "R-pkg"

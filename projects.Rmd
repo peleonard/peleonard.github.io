@@ -3,10 +3,9 @@ title: "Projects"
 ---
 
 \  
-   
 
 ## Default Rate Prediction for Lending Club Data (R: data.table, caret. Python: scikit-learn, imblearn)
-Jun 2018 – Present
+Jun 2018 – July 2018
 
 - Validated the loan data on Lending Club, dealt with high missing-rate features and transformed skewed features. 
 
@@ -29,7 +28,7 @@ Apr 2018 – May 2018
 ## [Churn Prediction and Recommendation of A MusicBox (Python: pyspark, scikit-learn, graphLab, ALS)](https://github.com/peleonard/MusicBoxCapstone)
 Jun 2018 – Jul 2018 
 
-- Cleansed the log dataset (\textasciitilde14G), employed pyspark to generate user behaviours features and the churn label.
+- Cleansed the log dataset (\textasciitilde14G), employed pyspark to generate user behaviors features and the churn label.
 
 - Performed the exploratory data analysis to visualize the relationship between features and the label (churn or not).
 
@@ -54,7 +53,7 @@ Apr 2018 – May 2018
 ## Yelp Dataset by SQL (SQLite)
 Mar 2018 – Apr 2018
 
-- Project descriptionDetermined the data model by ER (entity relationship) diagram, retrieved data from the relational database and interpreted the implications in source data, e.g. relationships between rating stars and operation of hours.
+- Determined the data model by ER (entity relationship) diagram, retrieved data from the relational database and interpreted the implications in source data, e.g. relationships between rating stars and operation of hours.
 
 ## Analysis of Methylation Patterns in Whole Genome Bisulfite Sequencing Data (R: data.table HiddenMarkov)
 Nov 2017 – Feb 2018

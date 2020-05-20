@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -69,9 +70,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -85,13 +84,18 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -107,7 +111,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -127,6 +130,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -148,19 +188,73 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -173,12 +267,15 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Pengfeileonard Website</a>
+      <a class="navbar-brand" href="index.html">Leonard Li Website</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="experiences.html">Experiences</a>
 </li>
 <li>
   <a href="projects.html">Projects</a>
@@ -212,7 +309,7 @@ $(document).ready(function () {
 <p> </p>
 <div id="default-rate-prediction-for-lending-club-data-r-data.table-caret.-python-scikit-learn-imblearn" class="section level2">
 <h2>Default Rate Prediction for Lending Club Data (R: data.table, caret. Python: scikit-learn, imblearn)</h2>
-<p>Jun 2018 – Present</p>
+<p>Jun 2018 – July 2018</p>
 <ul>
 <li><p>Validated the loan data on Lending Club, dealt with high missing-rate features and transformed skewed features.</p></li>
 <li><p>Conducted graphical analysis on the imbalanced response, good (92) or bad (1) loan, and utilized 98 mixed-type features and ~97K loan records to construct the machine learning model.</p></li>
@@ -232,7 +329,7 @@ $(document).ready(function () {
 <h2><a href="https://github.com/peleonard/MusicBoxCapstone">Churn Prediction and Recommendation of A MusicBox (Python: pyspark, scikit-learn, graphLab, ALS)</a></h2>
 <p>Jun 2018 – Jul 2018</p>
 <ul>
-<li><p>Cleansed the log dataset (14G), employed pyspark to generate user behaviours features and the churn label.</p></li>
+<li><p>Cleansed the log dataset (14G), employed pyspark to generate user behaviors features and the churn label.</p></li>
 <li><p>Performed the exploratory data analysis to visualize the relationship between features and the label (churn or not).</p></li>
 <li><p>Constructed a stacking model with test AUC 0.9337 (formerly around 0.85), and summarized the churn reason.</p></li>
 <li><p>Defined the implicit rating, and bucketed it into 5 levels to mimic practical users’ star rating.</p></li>
@@ -252,7 +349,7 @@ $(document).ready(function () {
 <h2>Yelp Dataset by SQL (SQLite)</h2>
 <p>Mar 2018 – Apr 2018</p>
 <ul>
-<li>Project descriptionDetermined the data model by ER (entity relationship) diagram, retrieved data from the relational database and interpreted the implications in source data, e.g. relationships between rating stars and operation of hours.</li>
+<li>Determined the data model by ER (entity relationship) diagram, retrieved data from the relational database and interpreted the implications in source data, e.g. relationships between rating stars and operation of hours.</li>
 </ul>
 </div>
 <div id="analysis-of-methylation-patterns-in-whole-genome-bisulfite-sequencing-data-r-data.table-hiddenmarkov" class="section level2">
@@ -299,6 +396,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
